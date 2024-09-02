@@ -6,8 +6,9 @@
 * 컴퓨터 시스템은 하드웨어와 소프트웨어로 구성
 * 컴퓨터 성능은 주로 하드웨어에 의해 결정되며, 소프트웨어는 하드웨어가 제공하는 기능들을 이용하여 최종 결과를 얻을 수 있도록 도와줄 뿐이다.
 * 소프트웨어의 질에 따라 하드웨어의 사용 효율이 일부 향상되거나 사용 환경이 좀 더 편리해질 수는 있다.
+![image](https://github.com/user-attachments/assets/66faeecd-ddb9-40db-8102-4f26ac5a5644)
 
-![image](https://github.com/user-attachments/assets/7d13d8e1-b102-4fdc-a762-3a012afa975e)
+
 * 하드웨어: 컴퓨터에서 각종 정보를 입력하여 처리하고 저장하는 동작이 실제 일어나게 해주는 물리적인 실체
 * 소프트웨어: 정보 처리의 종류를 지정하고 정보의 이동 방향을 결정하는 동작이 일어나는 시간을 지정해 주는 명령(command)들의 집합(프로그램)
 
@@ -16,7 +17,7 @@
 * 컴퓨터의 하드웨어는 중앙 처리 장치, 주기억 장치, 입력 장치, 출력 장치, 시스템 버스로 구성
 * 각 구성 요소는 시스템 버스를 통해 상호 연결됨
 
-![image](https://github.com/user-attachments/assets/31166a22-20f1-4fca-a1e7-871ff1f592fd)
+![image](https://github.com/user-attachments/assets/8311ad8e-28ed-4cdd-9a1b-b4e8a633a7c5)
 
 #### 중앙 처리 장치
 * 인간의 두뇌에 해당하는 부분
@@ -28,7 +29,7 @@
   * 제어 장치: 프로그램의 명령어를 해독하여 명령어 실행에 필요한 제어 신호를 발생시키고 컴퓨터의 모든 장치를 제어
   * 레지스터: 중앙 처리 장치 내부에 있는 데이터를 일시적으로 보관하는 임시 기억 장치로, 프로그램 실행 중에 사용되며 고속으로 액세스할 수 있다.
 
-![image](https://github.com/user-attachments/assets/ad02dc28-87e9-4a6d-92b6-9cf29efaff96)
+![image](https://github.com/user-attachments/assets/64b0cd97-281b-41f0-bb45-123789e78d99)
 
 #### 기억 장치
 * 중앙 처리 장치가 처리할 프로그램과 데이터는 기억 장치에 저장
@@ -68,7 +69,8 @@
    * 따라서 중앙 처리 장치와 주기억 장치 사이에는 이러한 정보들의 통로인 주소버스, 데이터 버스 및 제어 버스의 읽기/쓰기 신호선들이 연결되어야 함
 
 * 보조기억 장치나 입출력 장치는 속도가 느리기 때문에 인터페이스 회로나 제어기를 통해 중앙 처리 장치와 연결되어야 함
-![image](https://github.com/user-attachments/assets/32bb9f34-97ca-4a95-b796-da51aafc78e9)
+
+![image](https://github.com/user-attachments/assets/4abcb030-cb66-415b-b92a-97cbe2522021)
 
 * 컴퓨터 시스템의 수행 기능
    * 프로그램 실행: 중앙 처리 장치가 주기억 장치에서 프로그램 코드를 읽어 실행
@@ -85,17 +87,19 @@
    * 운영체제, 언어 번역 프로그램, 유틸리티 프로그램
    * 유틸리티 프로그램: 각종 주변 장치들을 구동하는 데 필요한 드라이버 프로그램, 백신 프로그램, TCP/IP같이 컴퓨터를 네트워크로 연결하는 데 필요한 각종 프로그램 등
  
-![image](https://github.com/user-attachments/assets/1d5bbfb4-b9b9-45f3-bb4f-bda1b6df4101)
+![image](https://github.com/user-attachments/assets/3dc485dd-e302-4020-9a2b-d7420d6636a7)
+
 
 * 응용 소프트웨어: 컴퓨터 시스템을 일반 사용자들이 특정한 용도에 활용하기 위해 만든 프로그램으로, 애플리케이션, 앱, 어플이라고도 함
-![image](https://github.com/user-attachments/assets/3609945e-8af0-46b3-9f0e-d6f8c947e17a)
 
+![image](https://github.com/user-attachments/assets/fc46e589-a8d5-4871-a254-679d8e66cce3)
 
 3. 프로그램 처리 과정
 * 프로그램은 고급 언어-> 어셈블리어-> 기계어 순으로 변환
-![image](https://github.com/user-attachments/assets/46a031c1-11e4-4e95-9d35-fe4987cc1c93)
+![image](https://github.com/user-attachments/assets/1d65195e-39d1-4144-bb9e-4f51ab98055d)
 
-![image](https://github.com/user-attachments/assets/fd35bf93-945a-4ee1-94fc-38b20bd207ef)
+![image](https://github.com/user-attachments/assets/cc77390b-5d52-4939-a608-792b983c0652)
+
    1. load A, X
        * 연산 코드 001은 레지스터 A에 로드하라는 명령을 지정해 주는 비트
        * 오퍼랜드 01010은 로드될 데이터가 저장되어 있는 메모리의 주소
@@ -109,7 +113,9 @@
        * 오퍼랜드 01100(=10진수로 12)은 저장할 메모리의 주소
     
 #### 프로그램과 데이터가 주기억 장치에 저장되어 있는 형태
-![image](https://github.com/user-attachments/assets/57f688e3-ba38-4a13-bcb6-1e4b849a4a04)
+
+![image](https://github.com/user-attachments/assets/17b58b30-3209-44a6-bd62-f1853b12d0b6)
+
 * 중앙 처리 장치는 주기억 장치에 저장되어 있는 기계어 프로그램을 순차적으로 읽음
 * 읽혀진 기계어 중에서 앞의 3비트를 이용해 명령의 종류를 해독하는 기능은 중앙 처리 장치 내부의 제어 장치에서 수행
 * LOAD, STOR동작은 제어 장치에서 이에 필요한 제어 신호들을 발생시켜 수행하고, 덧셈은 산술 논리 연산 장치에서 수행
@@ -119,7 +125,7 @@
 
 4. 컴퓨터 시스템의 계층 레벨
 
-![image](https://github.com/user-attachments/assets/041c4f3f-f7fa-4445-b5d8-2f3db7e4c03b)
+![image](https://github.com/user-attachments/assets/c303f79f-aa6f-4fac-af47-04c593db3185)
 
 * 레벨 6: 사용자 레벨이며 응용 프로그램으로 구성된다. 이 레벨에서 사용자들은 워드 프로세서, 그래픽 패키지, 게임 등과 같은 프로그램을 동작시킨다.
 * 레벨 5: C/C++, JAVA, FORTRAN같은 고급 언어로 구성되어 있다. 고급 언어->어셈블리어->기계어 순으로 번역된다.
