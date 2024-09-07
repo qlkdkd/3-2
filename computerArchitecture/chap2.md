@@ -37,4 +37,4 @@
 
 * 8진수보다는 16진수를 사용하는 경우가 더 많은데 실제로 컴퓨터 구조나 어셈블리어에서는 16진수를 많이 쓴다.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/344d0a27-1eae-4727-b96a-246c1f1e1d7a)
