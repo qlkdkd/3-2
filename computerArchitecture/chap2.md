@@ -74,3 +74,28 @@
 ---
 
 ## 2.2. 정수 표현
+### 1. 보수의 개념과 음수
+#### 최상위비트(MSB)를 부호 비트로 사용
+* 양수(+): 0, 음수(-): 1
+
+#### 2진수 음수를 표시하는 방법
+* 부호의 절댓값
+* 1의 보수
+* 2의 보수
+
+#### 부호의 절댓값
+* 부호비트만 양수와 음수를 나타내고 나머지 비트들은 같다.
+
+![image](https://github.com/user-attachments/assets/3e71fcf8-ed83-41b0-99fc-e321cd65fda9)
+
+#### 1의 보수방식
+* 0->1, 1->0으로 변환
+
+![image](https://github.com/user-attachments/assets/b5773bcb-673a-4ba9-a934-39f7886ff6ff)
+
+#### 2의 보수 방식
+* 1의 보수+1 = 2의 보수
+
+![image](https://github.com/user-attachments/assets/5576fb2b-eb6c-4e0b-ab4c-33012d7fe748)
+
+![image](https://github.com/user-attachments/assets/c8d53498-e1ed-4e80-9c4e-78486c2d9f0c)
