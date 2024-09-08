@@ -190,3 +190,64 @@
 * 연속되는 코드들 간에 하나의 비트만 변화하여 새로운 코드가 된다.
 
 ![image](https://github.com/user-attachments/assets/4372a4e0-d194-453b-bf9a-0ffef00c7202)
+
+![image](https://github.com/user-attachments/assets/07fa4736-1c4e-4881-8d38-62bc40e66614)
+
+![image](https://github.com/user-attachments/assets/6e442e9c-4892-411d-98ed-a4defcd30af2)
+
+![image](https://github.com/user-attachments/assets/0249ffd6-5dd9-4341-aabd-94f6f4e3277f)
+
+![image](https://github.com/user-attachments/assets/3bef9f2c-d022-4ed0-ac41-ef0a652d7692)
+
+![image](https://github.com/user-attachments/assets/834575ff-5fac-4c20-91cf-1e025f4d578c)
+
+![image](https://github.com/user-attachments/assets/ac12099a-805e-418a-9e3b-ff7d252ed886)
+
+![image](https://github.com/user-attachments/assets/510066c2-c238-41a6-b013-be1ef09fc40a)
+
+---
+
+## 2.5. 에러 검출 코드
+### 1. 패리티 비트
+* 짝수 패리티: 데이터에서 1의 개수를 짝수 개로 맞춤
+* 홀수 패리티: 1의 개수를 홀수 개로 맞춤
+* 패리티 비트는 데이터 전송과정에서 에러 검사를 위한 추가 비트
+* 패리티는 단지 에러 검출만 가능하며, 여러 비트에 에러가 발생하는 경우에는 검출이 안될 수도 있음
+
+![image](https://github.com/user-attachments/assets/2cc77ce9-8e99-440e-b1aa-adf87685da7a)
+
+### 2. 해밍 코드
+* 에러를 정정할 수 있는 코드
+* 추가적으로 많은 비트가 필요하므로 많은 양의 데이터 전달이 필요
+* 데이터 비트와 패리티 비트와의 관계
+
+$$2^p>=d+p+1$$(d=데이터 비트 수, p=패리티 비트 수)
+
+* 예를 들어 d=8이면 $2^p>=8+p+1$을 만족하는 p를 계산하면 4가 된다.
+* 해밍 코드에서는 짝수 패리티를 사용
+
+![image](https://github.com/user-attachments/assets/138a2e14-95c7-47f6-b4c9-120ea8eaf293)
+
+![image](https://github.com/user-attachments/assets/619405cb-9341-41fc-ba6c-ec46aa9253e1)
+
+![image](https://github.com/user-attachments/assets/124dcb14-c960-4326-bdf5-fa3f80cb3b96)
+
+#### 해밍 코드에서 패리티 비트 검사 과정
+
+![image](https://github.com/user-attachments/assets/d49e5962-fe50-447d-a79b-90524ad777cc)
+
+![image](https://github.com/user-attachments/assets/4e06085c-d98d-4190-9695-afeb5f972bfa)
+
+### 3. 순환 중복 검사(CRC)
+* 높은 신뢰도를 확보하며 에러 검출을 위한 오버헤드가 적고, 랜덤 에러나 버스트 에러를 포함한 에러 검출에 매우 좋은 성능을 갖는다.
+
+#### CRC 발생기 및 검출기
+* 수신 측에서는 수신된 d+k비트의 데이터를 키 값으로 나누었을 때 나머지가 0이면 에러가 없는 것이지만, 0이 아니면 에러가 발생한 것으로 판단한다.
+
+![image](https://github.com/user-attachments/assets/4fdb4da1-afe9-4293-b66a-5b1e12c3fd00)
+
+![image](https://github.com/user-attachments/assets/f83f8486-32da-4276-86ba-9dabfaf5276b)
+
+![image](https://github.com/user-attachments/assets/ba81872d-01e2-44c4-9467-a22a23c4aa3b)
+
+![image](https://github.com/user-attachments/assets/49ae4f27-b293-4ae2-8037-2695c4e7dbab)
