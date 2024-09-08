@@ -148,4 +148,5 @@
 * 부호(S)가 0일때는 양수를 나타내고, 1일 때는 음수를 나타낸다.
 * 단정도(single precision) 부동소수점과 배정도(double precision) 부동소수점수의 두 가지 표현방법이 있다.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/b6889871-4d9e-4d13-bc28-7af1e27834ae)
+
