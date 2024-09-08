@@ -150,3 +150,43 @@
 
 ![image](https://github.com/user-attachments/assets/b6889871-4d9e-4d13-bc28-7af1e27834ae)
 
+### 정규화(nomalization): 과학적 표기방법
+#### 2진수의 정규화
+![image](https://github.com/user-attachments/assets/5d87c24e-4eea-42c1-b93d-3b930cabb89e)
+
+#### 바이어스(bias): 지수의 양수, 음수를 나타내기 위한 방법
+* IEEE754 표준에서는 바이어스 127(단정도) 또는 1023(배정도)을 사용
+* 표현 지수=바이어스+2진 지수 값
+
+![image](https://github.com/user-attachments/assets/137544cc-743b-48fb-b819-627df1d5566b)
+
+#### 10진수 -0.2를 단정도 부동소수점으로 표현
+* 2진수로 변환하고 정규화한다.
+
+![image](https://github.com/user-attachments/assets/8f00976c-ca29-4386-9ddf-ad7585e888c4)
+
+![image](https://github.com/user-attachments/assets/33f74e02-0f3e-4a40-9681-41b653060925)
+
+---
+
+## 2.4. 디지털 코드
+### 1. BCD 코드
+* BCD코드는 10진수 0(0000)부터 9(1001)까지를 2진화한 코드
+* 표기는 2진수이지만 의미는 10진수
+* 1010부터 1111까지 6개는 사용하지 않음
+
+![image](https://github.com/user-attachments/assets/b1dd29c4-fb83-4ac8-bed4-c3c5c785ecc9)
+
+![image](https://github.com/user-attachments/assets/5df3bba8-752b-4fb9-82ed-e789082ab8cd)
+
+### 2. 3초과 코드
+* BCD코드(8421코드)로 표현된 값에 3을 더해 준 갑3ㅅ으로 나타내는 코드
+* 자기보수의 성질
+
+![image](https://github.com/user-attachments/assets/b8301676-7573-4224-96cc-4fdae5ebe09b)
+
+### 3. 그레이 코드
+* 가중치가 없는 코드이기 때문에 연산에는 부적합하지만, 아날로그-디지털 변환기나 입출력 장치 코드로 주로 사용
+* 연속되는 코드들 간에 하나의 비트만 변화하여 새로운 코드가 된다.
+
+![image](https://github.com/user-attachments/assets/4372a4e0-d194-453b-bf9a-0ffef00c7202)
