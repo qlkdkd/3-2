@@ -99,3 +99,53 @@
 ![image](https://github.com/user-attachments/assets/5576fb2b-eb6c-4e0b-ab4c-33012d7fe748)
 
 ![image](https://github.com/user-attachments/assets/c8d53498-e1ed-4e80-9c4e-78486c2d9f0c)
+
+#### r진수에는 r의 보수와 r-1의 보수가 있다.
+* 10진수에는 9의 보수와 10의 보수가 있고, 8진수에는 7의 보수와 8의 보수가 있으며, 2진수에는 1의 보수와 2의 보수가 있다.
+
+![image](https://github.com/user-attachments/assets/6240da26-0137-4418-9f6f-8811d133cab3)
+
+![image](https://github.com/user-attachments/assets/23c0fa73-33d4-4b39-ac91-400303d77de9)
+
+* 2진수와 그 수의 1의 보수와의 합은 모든 비트가 1이 된다.
+* 2진수와 그 수의 2의 보수와의 합은 모든 비트가 0이 된다(자릿수를 벗어나는 비트는 제외).
+
+![image](https://github.com/user-attachments/assets/c2099892-baa9-4f89-a0f9-782723097d3c)
+
+#### 2의 보수를 10진수로 변환
+
+![image](https://github.com/user-attachments/assets/2c9b23cc-e647-40d3-a022-baa146e59cbc)
+
+### 2. 부호 확장
+* 부호 확장이란 늘어난 비트 수 만큼 부호를 늘려주는 방법
+
+![image](https://github.com/user-attachments/assets/14647df8-2a34-4d45-b434-b61b627cd37d)
+
+### 3. 2진 정수 연산
+* 뺄셈의 원리를 보면, A-B 대신의 A+(B의 2의 보수)를 계산하면 된다.
+* 뺄셈에서 2의 보수 방식을 사용하는 이유는 뺄셈을 가산기를 사용하여 수행할 수 있다.
+
+![image](https://github.com/user-attachments/assets/5c5501fa-5bb0-49e0-bc5a-6197a4af3008)
+
+### 4. 팩 10진 형식
+* 디지트 digit 2개를 8421코드로 나타내고 최하위 바이트의 존 부분에 4비트의 부호를 표현한다.
+* 부호는 양수(+)는 C(1100), 음수는 D(1101), 부호가 없는 양수는 F(1111)로 표현된다.
+
+![image](https://github.com/user-attachments/assets/12621fb6-1753-48c7-864a-18b9e7dacb5c)
+
+### 5. 언팩 10진 형식
+* 1바이트가 존 부분과 디지트 부분으로 구성되어 있다.
+* 존 부분에는 F(1111)가 들어가고, 디지트 부분에는 8421코드로 표현된 숫자가 들어간다.
+* 하위 바이트의 존 부분에 부호가 들어가며 양수(+)는 C(1100), 음수(-)는 D(1101), 부호가 없는 양수는 F(1111)로 표현한다.
+
+![image](https://github.com/user-attachments/assets/acf48a17-27a5-47d0-8dcd-2cd85aa886b7)
+
+---
+
+## 2-3. 실수 표현
+* 컴퓨터의 부동소수점수는 IEEE754 표준을 따른다.
+* 부호(sign), 지수(exponent), 가수(mantissa)의 세 영역으로 표시
+* 부호(S)가 0일때는 양수를 나타내고, 1일 때는 음수를 나타낸다.
+* 단정도(single precision) 부동소수점과 배정도(double precision) 부동소수점수의 두 가지 표현방법이 있다.
+
+![Uploading image.png…]()
