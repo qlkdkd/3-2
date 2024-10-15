@@ -164,3 +164,49 @@ lable1...  //brach to here
 
 ### 스택 구현
 ![image](https://github.com/user-attachments/assets/081baddc-4d77-4a7b-b243-6841d7495642)
+
+### 베이스 레지스터
+* 베이스 레지스터: 스택의 기준점
+* 베이스 레지스터 활용 예제
+
+![image](https://github.com/user-attachments/assets/a8dc715e-b7e0-4f08-9579-7b7e3fbdc460)
+
+### 베이스 레지스터 활용
+![image](https://github.com/user-attachments/assets/749c4f10-c2ba-47a0-b20c-b6b30db1c000)
+
+* a. 함수 호출 전: 이 함수를 호출하기 전에 스택 포인터(SP)와 베이스 레지스터(BR)은 스택의 어딘가를 가리키고 있다.
+* b. 파라미터 전달: 함수를 호출하는 문장을 실행하면서, 파라미터 param3, param2, param1의 순서로 스택에 푸시한다. 이 동작에 따라 스택 포인터(SP)값이 변경된다.
+* c. 복귀 주소 저장: 실제로 함수를 호출하는 명령어를 실행하면서, 복귀 주소(return address)를 스택에 저장한다. 프로그램 카운터는 이 함수의 시작 위치로 설정된다.
+* d. 이전 BR 저장: 이전 베이스 레지스터(BR) 값을 잃으버리지 않도록, 스택에 베이스 레지스터(BR)값을 푸시한다.
+* e. 새로운 BR 설정: 베이스 레지스터(BR)의 값을 현재 스택 포인터(SP)값으로 설정한다. 이 동작을 수행하고 나면, 베이스 레지스터(BR)는 스택의 새로운 기준점을 가리킨다.
+* f. 지역 변수 할당: 스택에 지역변수 local1과 local2를 위한 공간을 만들고 그 크기만큼 스택 포인터(SP)를 감소시킨다.
+
+![image](https://github.com/user-attachments/assets/c0eb49c1-ff3b-4c83-a437-14cfb0169454)
+
+* 함수를 호출하기 전 SP=F180h, BR=F188h이다.
+* 파라미터 전달: 함수를 호출하면, 파라미터 4, 7, 10을 역순으로 스택에 푸시한다.
+* 복귀 주소 저장: 함수에서 복귀할 주소 0420h를 스택에 푸시한다.
+* BR 재설정: 현재의 SP값을 BR에 저장한다.
+* 지역 변수 할당: 지역 변수 2개를 스택에 할당한다. SP값은 F179h로 설정된다.
+
+### 인덱스 레지스터
+* 연속적으로 저장되어 있는 데이터(배열)의 액세스
+* 자동 인덱싱(automatic indexing)
+ * R0<- R0+Mem(IX), IX<- IX+1
+
+* 예: int array[5]={0, 1, 2, 3, 4}; //1000h번지부터 할당
+![image](https://github.com/user-attachments/assets/9c76ebee-6e84-49b0-b077-8998da3df97a)
+
+* a에서 인덱스 레지스터 IX의 초기값은 배열 array의 시작 주소인 1000h로 설정되어 있다. 배열 원소를 차례대로 읽어 레지스터 R1에 저장하는 레지스터 전송문은 다음과 같다.
+```assembly
+R0<- R0+Mem(IX), IX<- IX+1
+```
+
+* b에서 레지스터 R0는 배열의 시작 주소 1000h를 저장하고 있고 인덱스 레지스터 IX는 0으로 초기화되어 있다. 배열을 사용하는 도중에 R0값은 변경되지 않는다. 배열 원소를 차례대로 읽어 레지스터 R1에 저장하는 레지스터 전송문은 다음과 같다.
+
+```assembly
+R1<- Mem[IX+R0], IX<- IX+2
+```
+
+### 프로세서 레지스터
+![image](https://github.com/user-attachments/assets/f233bd99-9de9-4118-88cb-27c89102e3b9)
