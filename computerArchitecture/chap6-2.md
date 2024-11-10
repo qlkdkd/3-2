@@ -90,3 +90,39 @@ ASR R1// R1<-R1/2, 부호 비트를 채움
  
 ## 6.6 실수
 ### 부동 소수점 표현
+* 과학 표기
+  * $\pm significant\times Base^{exponent}(부호\* 가수 \times 기수^{지수}$
+  * $significant=mantissa=fraction$
+* 10진수 과학 표기 예
+  * $976,000,000,000=9.76\times 10^{11}$
+  * $-0.00000000000976=9.76\times 10^{-12}$
+* 2진수 예
+  * $0.1101\times 2^{2}=11.010\times 2^{0}=110.10\times 2{-1}$
+  * 정규화(normalize) 필요
+ 
+### 가수 정규화
+* 가수 정규화
+  * ($1.bbb...b\times 2^{\pm E}$)형식이 되도록 지수 조정
+  * 1.은 표현에서 생량(항상 1.0은 있는 것으로 취급)
+  * 가수를 표현하는 비트 영역 최대 활용
+  * 숫자 0은 모든 비트를 0으로 채움
+ 
+![image](https://github.com/user-attachments/assets/d1948fe7-a047-4e75-8463-ab50c619311a)
+
+### 바이어스 지수
+* 바이어스 지수
+  * 표현=지수+bias //지수를 양수로 변환
+  * 실제 지수=표현-bias
+  * 예) 지수 영역이 8비트일 때, $bias=127_{10}=0111_1111$
+
+![image](https://github.com/user-attachments/assets/b2576616-abe6-471f-a23f-1e40539cfb84)
+
+  * 이유: 덧셈 뺄셈을 할 때, 양수 영역에서 지수를 비교하기 위하여
+
+![image](https://github.com/user-attachments/assets/e50f7403-91a9-4627-b290-7341278a3cec)
+
+![image](https://github.com/user-attachments/assets/e46fca47-dad4-4f30-b052-8c6abe932fdb)
+
+![image](https://github.com/user-attachments/assets/a59b8520-bd30-4e59-8b92-89356bc44172)
+
+![image](https://github.com/user-attachments/assets/84f32280-65fa-42b2-8aff-8d7306982ecd)
