@@ -164,6 +164,7 @@ ADD Y, R1, R2 // Y<-R1+R2
 
 ### 간접 주소지정방식
 ![image](https://github.com/user-attachments/assets/4f496a9d-3d74-4247-a047-a1468a3fdf44)
+
 * 간접주소지정방식은 그림 6-10과 같이 명령어의 오퍼랜드 필드에 유효 주소가 저장되어 있는 기억 장소의 주소가 저장되어 있고, 기억장치에서 유효 주소를 찾아 이 주소로 기억장치를 한 번 더 액세스해야 실제로 처리할 유효 데이터를 찾을 수 있다.
   * A는 기억장치 주소이므로 부호 없는 수이다.
   * Mem(A)에 기억장치 주소가 저장되어 있고, 이것이 유효 주소이다.
@@ -178,6 +179,7 @@ ADD Y, R1, R2 // Y<-R1+R2
 
 ### 레지스터 주소지정방식
 ![image](https://github.com/user-attachments/assets/575eb78c-7ea1-45d0-9f1f-60dd49f74983)
+
 * 레지스터 주소지정방식은 그림 6-11과 같이 명령어의 오퍼랜드 필드가 레지스터 중 하나를 지시한다. 레지스터 값이 처리할 유효 데이터이다.
   * 유효 데이터가 기억장치가 아닌 레지스터에 저장되어 있다.
   * 기억장치를 사용하지 않으므로, 유효 주소 개념이 없다.
@@ -190,3 +192,52 @@ ADD Y, R1, R2 // Y<-R1+R2
   * 3-주소지정방식: ADD R0, R1, R2 //R0<-R1+R2
  
 ![image](https://github.com/user-attachments/assets/c3bee80b-df8a-4e01-b9e2-4b6bd929b91f)
+
+### 레지스터 간접 주소지정방식
+![image](https://github.com/user-attachments/assets/5854b0b5-ef81-4c04-8469-8494fda368ac)
+
+* 레지스터 간접주소지정방식은 레지스터 주소지정방식과 간접 주소지정방식을 합친 것이다. 그림 6-12와 같이 명령어의 오퍼랜드 필드는 레지스터를 지정하고, 이 레지스터의 값을 유효 주소로 사용하여 기억 장치를 액세스하고, 그 안에 유효 데이터가 저장되어 있다.
+  * 유효 주소가 레지스터에 저장되어 있다. 유효 주소는 (R)이고, 유효 데이터는 Mem((R))이다.
+  * 실행 단계에서 유효 데이터를 가져오기 위하여 기억장치를 한 번 액세스한다.
+  * R은 레지스터 번호이므로, 기억장치 주소에 비하여 길이가 짧다. 명령어 길이가 짧으면서도 기억장치를 액세스할 수 있다는 장점이 있다.
+ 
+![image](https://github.com/user-attachments/assets/9ae2b49a-9760-4daf-a368-47950df5c5bb)
+
+### 변위 주소지정 방식
+
+![image](https://github.com/user-attachments/assets/8110010f-80db-4b2b-8853-d51c3ae3552f)
+
+* 유효 주소 = (R)+A
+* 부호 확장 덧셈 예
+  * 기억장치 주소: 16비트(기억장치 공간 64KB)
+  * 레지스터 길이: 16비트
+  * 명령어 주소 필드 A: 12비트
+  * 유효 주소: (R)(16비트)+A(12비트)
+ 
+* 종류
+  * 상대주소지정방식
+  * 베이스 레지스터 주소지정방식
+  * 인덱싱
+ 
+### 상대주소지정방식
+
+![image](https://github.com/user-attachments/assets/c7338f19-58b4-4cb1-9c48-1d012e79d822)
+
+* 상대주소지정방식
+  * 분기 목적지=PC+A(정수, 부호 확장)
+  * (조건)분기명령어, 서브루틴 호출 명령어
+ 
+### 베이스 레지스터 주소지정방식
+* Base Register: 스택의 기준점 지정
+* 유효 주소=(BR)+A(정수, 부호 확장 계산)
+* 기준점의 위 아래 액세스 가능
+
+![image](https://github.com/user-attachments/assets/53a34568-c8f5-4cdc-be44-547550eda223)
+
+### 인덱싱
+* 유효주소=(Index Register)+A(부호 없는 수, 부호 확장 계산)
+* 자동 인덱싱(auto indexing)
+  * Pre-indexing: 인덱스 레지스터 갱신 후 기억장치 액세스
+  * Post-indexing: 기억장치 액세스 후 인덱스 레지스터 갱신
+ 
+![image](https://github.com/user-attachments/assets/48bafbde-207e-4b7b-a44f-dad84aef4f65)
