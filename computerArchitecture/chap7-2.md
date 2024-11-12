@@ -96,3 +96,32 @@
 * Set reset interrupt flag 명령어
   * sti(set interrupt flag)
   * cli(reset interrupt flag)
+
+### 분기 명령어
+![image](https://github.com/user-attachments/assets/a2e4ebf5-1eb4-4fb1-ab54-381b5351fe68)
+
+* 오퍼랜드=분기 목적지 주소
+  * 직접 주소지정방식
+  * 레지스터 간접주소지정방식
+  * 상대주소지정방식
+* 종류
+  * 무조건 분기 명령어: br/jmp
+  * 조건 분기 명령어
+    * branch taken: PC<- 분기 목적지 주소
+    * branch not taken: PC<- 다음 명령어(변하지 않음)
+   
+![image](https://github.com/user-attachments/assets/e5c5018c-1a0a-49c9-986d-fa19d18e094a)
+
+### 조건 검사
+![image](https://github.com/user-attachments/assets/1bd8fe94-5e48-42c6-8478-52c11ef6cbe9)
+
+![image](https://github.com/user-attachments/assets/a7da6b10-61e4-468e-a571-01bd6d9a1b99)
+
+### 서브루틴 호출 명령어
+![image](https://github.com/user-attachments/assets/55c32448-18c4-4337-a578-8ba740284369)
+
+![image](https://github.com/user-attachments/assets/a952e53e-f7b7-4aa6-893c-b17b3bd11bb7)
+
+![image](https://github.com/user-attachments/assets/68b499d7-438b-4560-848c-01d15aa6898e)
+
+![image](https://github.com/user-attachments/assets/bd703bb7-1c71-4397-bcf2-3c4e7200c761)
